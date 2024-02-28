@@ -1,30 +1,11 @@
-# React + TypeScript + Vite
+# Sqwid Client Maintenance Landing 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple page for sqwid client when it's under maintenance, serves using nginx on docker
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Command to run
+```
+docker build -t sqwidapp .      
+docker run -p 3000:3000 sqwidapp
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<img width="1350" alt="Screenshot 2024-02-28 at 8 18 11 PM" src="https://github.com/anukulpandey/sqwid-maintenance/assets/62092256/9262bc4f-2145-463b-89ae-7f773792178d">
