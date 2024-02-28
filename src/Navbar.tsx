@@ -54,6 +54,17 @@ const SVG = styled.svg`
 	fill: currentColor;
 `;
 
+const BlinkingEmoji = styled.div`
+padding-right: 10px;
+  animation: blink 1s linear infinite;
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+`;
+
 const LogoIcon = () => {
 	return (
 		<SVG
@@ -90,7 +101,7 @@ const Navbar = React.memo(() => {
 				<LogoIcon />
 				<span>Sqwid</span>
 			</LogoContainer>
-		<div style={{fontWeight:'lighter',color:'yellow'}}>🚨 Marketplace currently down for maintenance</div>	
+		<div style={{fontWeight:'lighter',color:'yellow',display:'flex'}}><BlinkingEmoji>🚨 </BlinkingEmoji>Marketplace currently down for maintenance</div>	
 		</Nav>
 	);
 });
